@@ -6,6 +6,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FolderPage } from '../pages/folder-page/folder-page';
+import { AddFolderPage } from '../pages/add-folder-page/add-folder-page';
+import { Data } from '../providers/data';
+import { Storage } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { FolderPage } from '../pages/folder-page/folder-page';
     ContactPage,
     HomePage,
     TabsPage,
-    FolderPage
+    FolderPage,
+    AddFolderPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,8 +30,9 @@ import { FolderPage } from '../pages/folder-page/folder-page';
     ContactPage,
     HomePage,
     TabsPage,
-    FolderPage
+    FolderPage,
+    AddFolderPage,
   ],
-  providers: []
+  providers: [Data, Storage]
 })
 export class AppModule {}
